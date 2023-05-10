@@ -16,7 +16,7 @@ namespace ariel{
         Fraction(int numerator,int denominator);
         Fraction(float fraction);
 
-        friend bool checkOverflow(const Fraction &fraction1, const Fraction &fraction2, char );
+        friend bool checkOverflow(int,int);
 
         void set_numerator(int);
         void set_denominator(int);
@@ -24,6 +24,7 @@ namespace ariel{
         int getDenominator();
 
         void reduce();
+        friend Fraction convert_float_to_fraction(float );
         friend float convert_fraction_to_float(Fraction);
 
         Fraction operator+(const Fraction&) const;
